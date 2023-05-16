@@ -40,7 +40,7 @@ If a command line argument is invoked, **hsh** will take that first argument as 
 
 Example:
 ```
-$ cate text
+$ cat text
 echo 'julien'
 $ ./hsh text
 'julien'
