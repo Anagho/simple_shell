@@ -27,5 +27,27 @@ $ echo "echo 'julien'" | ./hsh
 'julien'
 $
 ```
+When **hsh** is invoked with standard input connected to a terminal (determined by isatty(3), the interactive mode is opened. **hsh** will be using the following prompt `^-^ `.
+
+Example:
+```
+$./hsh
+^-^
+
+```
+
+If a command line argument is invoked, **hsh** will take that first argument as a file from which to read commands.
+
+Example:
+```
+$ cate text
+echo 'julien'
+$ ./hsh text
+'julien'
+$
+```
 
 
+### Environment
+
+Upon invocation, **sodash** receives and copies the environment of the parent process in which it was executed. This environment is an array of *name-value* strings describing variables in the format *NAME=VALUE*. A few key environmental variables are:
